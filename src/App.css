@@ -17,3 +17,8 @@ body {
   height: 100vh;
   flex-direction: column;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
