@@ -3,6 +3,9 @@ import './App.css';
 
 function App() {
   const [entries, setEntries] = useState([]);
+  const addEntryToPhoneBook = (entry) => {
+    setEntries([...entries, entry].sort((a,b) => a.lastname.toLowerCase() > b.lastName.toLowerCase()));
+  }
   return (
     <div>
       <div className="container">
