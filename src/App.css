@@ -22,3 +22,15 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+input[type=text] {
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+}
