@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { uuid } from 'uuidv4';
 import './App.css';
 
 function App() {
@@ -71,9 +72,9 @@ function DisplayEntries({entries}) {
       <tbody>
        {entries.map(entry => (
         <tr>
-          <td>{entry.firstName}</td>
-          <td>{entry.lastName}</td>
-          <td>{entry.phoneNumber}</td>
+          <td key={uuid()}>{entry.firstName}</td>
+          <td key={uuid()}>{entry.lastName}</td>
+          <td key={uuid()}>{entry.phoneNumber}</td>
         </tr>
        ))}
       </tbody>
