@@ -1,4 +1,4 @@
-# Project Title
+# PhoneBook App
 
 A phone book application that will allow a user to input their firstname, lastname, and a phone number. Then display
 all of the entries in the phone book but sort the entries by lastname.

@@ -6,7 +6,7 @@ function App() {
   const addEntryToPhoneBook = (entry) => {
     setEntries(
       [...entries, entry].sort((a,b) => 
-      a.lastname.toLowerCase() > b.lastName.toLowerCase() ? 1 : -1));
+      a.lastName.toLowerCase() > b.lastName.toLowerCase() ? 1 : -1));
   }
   return (
     <div>
@@ -19,12 +19,13 @@ function App() {
   )
 }
 
-function DisplayForm() {
+function DisplayForm({addEntryToPhoneBook}) {
   const [firstName, setFirstName]     = useState("");
   const [lastName, setLastName]       = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    addEntryToPhoneBook({firstName, lastName, phoneNumber});
   };
   return (
     <form onSubmit={handleSubmit}>
