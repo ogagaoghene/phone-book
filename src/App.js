@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import { uuid } from 'uuidv4';
 import './App.css';
 
 function App() {
@@ -61,7 +60,7 @@ function DisplayForm({addEntryToPhoneBook}) {
 
 function DisplayEntries({entries}) {
   return (
-    <table>
+    <table className="styled-table">
       <thead>
         <tr>
           <th>Firstname</th>
@@ -70,11 +69,11 @@ function DisplayEntries({entries}) {
         </tr>
       </thead>
       <tbody>
-       {entries.map(entry => (
-        <tr>
-          <td key={uuid()}>{entry.firstName}</td>
-          <td key={uuid()}>{entry.lastName}</td>
-          <td key={uuid()}>{entry.phoneNumber}</td>
+       {entries.map((entry, index) => (
+        <tr key={index}>
+          <td>{entry.firstName}</td>
+          <td>{entry.lastName}</td>
+          <td>{entry.phoneNumber}</td>
         </tr>
        ))}
       </tbody>
