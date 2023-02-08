@@ -35,7 +35,6 @@ Install dependencies
 
 ```bash
   npm install
-  npm install uuidv4
 ```
 
 Start the server
